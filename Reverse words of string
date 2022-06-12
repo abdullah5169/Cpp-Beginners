@@ -1,0 +1,25 @@
+#include <sstream>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	cout << "Enter the string to be checked : ";
+	string s;
+	cin >> s;
+	int length = s.length();
+	bool flag = true;
+	int i = 0;
+	while (flag && i < length)
+	{
+		if (s[i] != s[length - 1 - i])
+			flag = false;
+		i++;
+	}
+	if (flag)
+		cout << "The string is a panidrome";
+	else
+		cout << "The string is not a panidrome";
+    
+  return 0;
+}
